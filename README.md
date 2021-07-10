@@ -11,21 +11,28 @@ Use `-h` command to list detail usage:
 
 ```bash
 $ ./Vessel-Smoothing.exe -h
-Smooth given vessel surface
-
-Options:
-  -?, -h, --help         Displays this help.
-  -s, --smooth <smooth>  Voronoi diagram smooth factor between 0 and 1
-                         (default=0.6)
-
-Arguments:
-  source          Source file to process.
-  centerline      Centerline file to process.
-  output          Output file location.
+Smooth given vessel surface:
+  -h [ --help ]                      Displays this help.
+  -i [ --input ] arg                 File to process.
+  -c [ --centerline ] arg            Centerline file to process.
+  -o [ --output ] arg                Output file path.
+  -s [ --smooth ] arg (=0.600000024) Voronoi diagram smooth factor between 0
+                                     and 1, where 0 indicates minimal smoothing
+                                     (default = 0.6)
+  -a [ --imageSize ] arg (=90)       PolyBall image size used for marching cube
+                                     surface generation, higher is more detail
+                                     (default = 90)
 ```
 
 ## Example Data
-Sample dataset can be found from ./Data. Corresponding centerlines are included in the same folder.
+Sample dataset can be found from ./Data. Corresponding centerlines are included in the same folder. The data is carotid artery with stenosis at CCA/ECA/ICA bifurcation. We would like to perform surface smoothing to remove bulk regions.
+
+```bash
+$ ./Vessel-Smoothing.exe -i <project-root>/Data/vessel.stl -c -i <project-root>/Data/centerline.vtp -a 200 -o <project-root>/Data/smooth.stl
+```
+
+![Smooth result](./Docs/smooth.png)
+Top: Before smoothing; Bottom: After smoothing
 
 ## Compile from source
 
