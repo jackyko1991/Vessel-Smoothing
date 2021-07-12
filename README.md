@@ -25,7 +25,7 @@ Smooth given vessel surface:
 ```
 
 ## Example Data
-Sample dataset can be found from ./Data. Corresponding centerlines are included in the same folder. The data is carotid artery with stenosis at CCA/ECA/ICA bifurcation. We would like to perform surface smoothing to remove bulk regions.
+Sample dataset can be found from `./Data`. Corresponding centerlines are included in the same folder. The data is carotid artery with stenosis at CCA/ECA/ICA bifurcation. We would like to perform surface smoothing to remove bulk regions.
 
 ```bash
 $ ./Vessel-Smoothing.exe -i <project-root>/Data/vessel.stl -c -i <project-root>/Data/centerline.vtp -a 200 -o <project-root>/Data/smooth.stl
