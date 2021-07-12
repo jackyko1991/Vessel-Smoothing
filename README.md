@@ -3,7 +3,7 @@
 A simple CLI tool to smooth vascular surface.
 
 ## Usage
-Example usage: `./Parent-Vessel-Reconstruction.exe <vessel-surface-path> <centerline-path> <output-surface-path> -s 0.6`
+Example usage: `./Vessel-Smoothing.exe <vessel-surface-path> <centerline-path> <output-surface-path> -s 0.6`
 
 You should first follow https://github.com/jackyko1991/Vessel-Centerline-Extraction to compute centerline from vessel surface file.
 
